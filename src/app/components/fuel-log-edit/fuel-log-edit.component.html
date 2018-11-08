@@ -31,9 +31,6 @@
       <div class="col-sm-6" *ngIf="fuelLog.id === undefined">
         <div class="form-group" [ngClass]="{'has-danger': !fuelLogForm.controls['date'].valid}">
           <label for="date">Date</label>
-          {{today}}
-          {{fuelLogForm.controls['date'].valid}}
-
           <input type="date" [(ngModel)]="today" [formControl]="fuelLogForm.controls['date']" required [ngClass]="{'is-invalid': !fuelLogForm.controls['date'].valid  && fuelLogForm.controls['date'].touched}"
             class="form-control" />
           <div class="invalid-feedback" *ngIf="!fuelLogForm.controls['date'].valid  && fuelLogForm.controls['date'].touched">Must
